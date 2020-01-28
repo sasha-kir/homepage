@@ -1,0 +1,25 @@
+{
+  "name": "sasha-kir-homepage",
+  "version": "1.0.0",
+  "description": "Homepage of Sasha Kirillov",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasha-kir/homepage.git"
+  },
+  "author": "Sasha Kirillov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sasha-kir/homepage/issues"
+  },
+  "homepage": "https://github.com/sasha-kir/homepage#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0"
+  },
+  "dependencies": {}
+}

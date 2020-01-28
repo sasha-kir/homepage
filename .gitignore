@@ -1,4 +1,10 @@
-.DS_Store
+# dependencies
+/node_modules
+
+# files
 fonts/*
 images/*
 favicon.ico
+
+# misc
+.DS_Store
