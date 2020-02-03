@@ -23,6 +23,7 @@
     width: 100vw;
     height: 100vh;
     color: var(--main-dark-color);
+    font-family: "Roboto", sans-serif;
 }
 
 button {
@@ -55,8 +56,9 @@ main {
 }
 
 #full-name {
-    font-family: 'soviet-league', 'sans-serif';
+    font-family: 'soviet-league', sans-serif;
     font-size: 3em;
+    letter-spacing: 0.05em;
     align-self: center;
 }
 
@@ -94,21 +96,50 @@ main {
 }
 
 .tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--main-dark-color);
     min-width: 100px; 
     top: 50%;
     left: 100%;
     margin-left: 20px;
-    transform: translate(0, -50%);
     padding: 10px;
     color: var(--light-theme);
-    background-color: var(--main-dark-color);
-    border-radius: 15px;
-    position: absolute;
-    z-index: 100;
     letter-spacing: 0.1em;
-    display: none;
+    font-family: "Roboto", sans-serif;
+    border-radius: 15px;
+    z-index: 100;
+    transform: translate(0, -50%);
 }
 
 .social-btn:hover .tooltip {
     display: block;
+}
+
+.main-section {
+    position: relative;
+    padding-top: 50px;
+}
+
+.main-section-heading {
+    background-color: var(--light-theme);
+    border-radius: 4px;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    font-family: 'soviet-league', sans-serif;
+    margin-left: 50px;
+    max-width: 150px;
+    padding: 10px 15px;
+    top: 20%;
+    left: 0;
+    position: absolute;
+}
+
+.main-section-content {
+    background-color: var(--light-theme);
+    margin: 25px 50px 0 50px;
+    height: 100px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+    padding: 10px;
 }
