@@ -20,11 +20,6 @@ const networksData = {
         icon: "linkedin",
         url: "https://www.linkedin.com/in/alexander-k-307466189/",
     },
-    goodReads: {
-        label: "Goodreads",
-        icon: "bookmark",
-        url: "https://www.goodreads.com/user/show/31514343-sasha",
-    },
 };
 
 const networksContainer = document.getElementById("social-networks");
