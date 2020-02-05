@@ -20,9 +20,9 @@
             <section id="social-networks"></section>
         </aside>
         <main>
-            <section class ="main-section" id="about">
+            <section class ="main-section">
                 <div class="main-section-heading">About me</div>
-                <div class="main-section-content">
+                <div class="main-section-content" id="about">
                   <div id="introduction">
                     A computational linguist that realized 
                     he is more interested in pursuing a career in IT.
@@ -37,19 +37,64 @@
                   </div>
                 </div>
             </section>
-            <section class ="main-section" id="projects">
+            <section class="main-section">
               <div class="main-section-heading">Projects</div>
-              <div class="main-section-content">
-                  Lorem ipsum
+              <div class="main-section-content" id="projects">
+                <div class="project-card main">
+                  <div class="project-logo">
+                    <img src="https://sasha-kir.ddns.net/house-explorer/static/media/logo.2aa7091e.svg" />
+                  </div>
+                  <div class="project-content">
+                    <div class="project-name">
+                      <a href="https://sasha-kir.ddns.net/house-explorer/" target="_blank">
+                        <span>house explorer</span>
+                      </a>
+                    </div>
+                    <div class="project-description">
+                      A React app for exploring Russian residential architecture
+                    </div>
+                </div>
+                </div>
+                  <div class="project-card">
+                    <div class="project-logo">
+                      <img src="https://sasha-kir.ddns.net/avtovaz/pics/lada-logo.png" />
+                    </div>
+                    <div class="project-content">
+                      <div class="project-name">
+                        <a href="https://sasha-kir.ddns.net/avtovaz/" target="_blank">
+                          <span>avtovaz</span>
+                        </a>
+                      </div>
+                      <div class="project-description">
+                        A website about classic AvtoVAZ cars
+                    </div>
+                  </div>
+                  </div>
+                  <div class="project-card">
+                    <div class="project-logo">
+                      <img src="https://sasha-kir.ddns.net/face-detection/static/media/planet.730da5c1.png" />
+                    </div>
+                    <div class="project-content">
+                      <div class="project-name">
+                        <a href="https://sasha-kir.ddns.net/face-detection/" target="_blank">
+                          <span>face detection</span>
+                        </a>
+                      </div>
+                      <div class="project-description">
+                        A React app where users can detect faces in images
+                      </div>
+                    </div>
+                  </div>
               </div>
           </section>
         </main>
     </div>
-    <!-- scripts -->
     <!-- feather icons -->
     <script defer crossorigin="anonymous" 
         src="https://unpkg.com/feather-icons@4.25.0/dist/feather.min.js"></script>
+    <!-- font awesome icons -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- scripts -->
     <script defer src="script.js"></script>  
   </body>
 </html>

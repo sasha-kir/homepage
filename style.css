@@ -18,7 +18,7 @@
     /* --main-theme: #d8eefe; */
     --main-theme: #094067;
     --light-theme: #fffffe;
-    --highlight: #3da9fc;
+    --highlight: #eee;
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100vw;
@@ -141,13 +141,12 @@ main {
 
 .main-section-content {
     background-color: var(--light-theme);
-    margin: 25px 50px 0 50px;
+    margin: 35px 50px 0 50px;
     min-height: 100px;
     min-width: 450px;
     border-radius: 4px;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
     padding: 10px;
-    font-size: 18px;
 }
 
 #introduction {
@@ -162,7 +161,7 @@ main {
     justify-items: center;
     padding: 5px;
     border-radius: 4px;
-    background-color:  #eee;
+    background-color:  var(--highlight);
 }
 
 .language-icon {
@@ -172,4 +171,112 @@ main {
 .flag-icon {
     font-size: 1.9em;
     border-radius: 7px;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 10px;
+    margin-top: 55px;
+}
+
+.project-card {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 15px;
+    min-height: 100px;
+    background-color: var(--highlight);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.project-card.main {
+    grid-column: 1 / -1;
+}
+
+.project-logo {
+    background: var(--light-theme);
+    border-radius: 15px;
+    height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-logo img {
+    height: 70px;
+}
+
+.project-name {
+    letter-spacing: 0.05em;
+    font-size: 20px;
+}
+
+.project-name a {
+    color: var(--main-dark-color);
+    text-decoration: none;
+    padding: 10px 20px;
+	position: relative;
+	overflow: hidden;
+    display: inline-block;
+    transition: .3s ease-out;
+}
+
+.project-name a::before,
+.project-name a::after,
+.project-name a	span::before,
+.project-name a	span::after {
+	width: 5px;
+	height: 5px;
+	background: transparent;
+    content: "";
+	position: absolute;
+	transition: .3s;
+	opacity: 1;
+}
+
+.project-name a	span::before {
+    left: 5px;
+    top: 5px;
+    border-top: 2px solid var(--main-dark-color);
+    border-left: 2px solid var(--main-dark-color);
+}
+
+.project-name a	span::after {
+	right: 5px;
+	bottom: 5px;
+	border-right: 2px solid var(--main-dark-color);
+	border-bottom: 2px solid var(--main-dark-color);
+}
+
+.project-name a::before {
+	right: 5px;
+	top: 5px;
+	border-right: 2px solid var(--main-dark-color);
+	border-top: 2px solid var(--main-dark-color);
+}
+
+.project-name a::after {
+	left: 5px;
+	bottom: 5px;
+	border-left: 2px solid var(--main-dark-color);
+	border-bottom: 2px solid var(--main-dark-color);
+}
+
+.project-name a:hover::before,
+.project-name a:hover::after,
+.project-name a:hover span::before,
+.project-name a:hover span::after {
+    opacity: 0;
+}
+
+.project-name a:hover {
+    background: var(--light-theme);
+    border-radius: 10px;
 }
