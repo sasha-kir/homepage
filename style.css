@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-	font-size: 1em;
+    font-size: 1em;
 }
 
 @font-face {
-    font-family: 'soviet-league';
-    src: url('./fonts/soviet-league/sovietleague-webfont.woff2') format('woff2'),
-         url('./fonts/soviet-league/sovietleague-webfont.woff') format('woff');
+    font-family: "soviet-league";
+    src: url("./fonts/soviet-league/sovietleague-webfont.woff2") format("woff2"),
+        url("./fonts/soviet-league/sovietleague-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -35,7 +35,7 @@ button {
 aside {
     background-color: var(--light-theme);
     display: grid;
-    grid-template-rows: 2fr 1fr 4fr;
+    grid-template-rows: 1fr 0.5fr 1.5fr;
     justify-items: center;
     justify-self: center;
     padding-bottom: 30px;
@@ -53,14 +53,14 @@ main {
 }
 
 #userpic img {
-    height: 150px;
+    height: 190px;
     width: auto;
     border-radius: 50%;
     border: 5px solid var(--main-dark-color);
 }
 
 #full-name {
-    font-family: 'soviet-league', sans-serif;
+    font-family: "soviet-league", sans-serif;
     font-size: 3em;
     letter-spacing: 0.05em;
     align-self: center;
@@ -103,7 +103,7 @@ main {
     display: none;
     position: absolute;
     background-color: var(--main-dark-color);
-    min-width: 100px; 
+    min-width: 100px;
     top: 50%;
     left: 100%;
     margin-left: 20px;
@@ -130,7 +130,7 @@ main {
     border-radius: 4px;
     font-size: 2em;
     letter-spacing: 0.1em;
-    font-family: 'soviet-league', sans-serif;
+    font-family: "soviet-league", sans-serif;
     margin-left: 50px;
     max-width: 150px;
     padding: 10px 15px;
@@ -145,7 +145,7 @@ main {
     min-height: 100px;
     min-width: 450px;
     border-radius: 4px;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
 
@@ -161,7 +161,7 @@ main {
     justify-items: center;
     padding: 5px;
     border-radius: 4px;
-    background-color:  var(--highlight);
+    background-color: var(--highlight);
 }
 
 .language-icon {
@@ -222,51 +222,51 @@ main {
     color: var(--main-dark-color);
     text-decoration: none;
     padding: 10px 20px;
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
     display: inline-block;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .project-name a::before,
 .project-name a::after,
-.project-name a	span::before,
-.project-name a	span::after {
-	width: 5px;
-	height: 5px;
-	background: transparent;
+.project-name a span::before,
+.project-name a span::after {
+    width: 5px;
+    height: 5px;
+    background: transparent;
     content: "";
-	position: absolute;
-	transition: .3s;
-	opacity: 1;
+    position: absolute;
+    transition: 0.3s;
+    opacity: 1;
 }
 
-.project-name a	span::before {
+.project-name a span::before {
     left: 5px;
     top: 5px;
     border-top: 2px solid var(--main-dark-color);
     border-left: 2px solid var(--main-dark-color);
 }
 
-.project-name a	span::after {
-	right: 5px;
-	bottom: 5px;
-	border-right: 2px solid var(--main-dark-color);
-	border-bottom: 2px solid var(--main-dark-color);
+.project-name a span::after {
+    right: 5px;
+    bottom: 5px;
+    border-right: 2px solid var(--main-dark-color);
+    border-bottom: 2px solid var(--main-dark-color);
 }
 
 .project-name a::before {
-	right: 5px;
-	top: 5px;
-	border-right: 2px solid var(--main-dark-color);
-	border-top: 2px solid var(--main-dark-color);
+    right: 5px;
+    top: 5px;
+    border-right: 2px solid var(--main-dark-color);
+    border-top: 2px solid var(--main-dark-color);
 }
 
 .project-name a::after {
-	left: 5px;
-	bottom: 5px;
-	border-left: 2px solid var(--main-dark-color);
-	border-bottom: 2px solid var(--main-dark-color);
+    left: 5px;
+    bottom: 5px;
+    border-left: 2px solid var(--main-dark-color);
+    border-bottom: 2px solid var(--main-dark-color);
 }
 
 .project-name a:hover::before,

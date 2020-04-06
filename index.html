@@ -1,100 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Sasha Kirillov" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="HandheldFriendly" content="true">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Sasha Kirillov" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="HandheldFriendly" content="true" />
 
-    <title>sasha-kir</title>
+        <title>sasha-kir</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.5/css/flag-icon.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-        <aside id="sidebar">
-            <section id="userpic"><img alt="userpic" src="images/sasha.png"/></section>
-            <section id="full-name">Sasha Kirillov</section>
-            <section id="social-networks"></section>
-        </aside>
-        <main>
-            <section class ="main-section">
-                <div class="main-section-heading">About me</div>
-                <div class="main-section-content" id="about">
-                  <div id="introduction">
-                    A computational linguist that realized 
-                    he is more interested in pursuing a career in IT.
-                    I love learning both natural and programming languages ✨
-                  </div>
-                  <div class="icons-container">
-                    <span class="flag-icon flag-icon-ru flag-icon-squared"></span>
-                    <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
-                    <i class="language-icon fab fa-python"></i>
-                    <span class="flag-icon flag-icon-es flag-icon-squared"></span>
-                    <i class="language-icon fab fa-js-square"></i>
-                  </div>
-                </div>
-            </section>
-            <section class="main-section">
-              <div class="main-section-heading">Projects</div>
-              <div class="main-section-content" id="projects">
-                <div class="project-card main">
-                  <div class="project-logo">
-                    <img src="https://sasha-kir.ddns.net/house-explorer/static/media/logo.2aa7091e.svg" />
-                  </div>
-                  <div class="project-content">
-                    <div class="project-name">
-                      <a href="https://sasha-kir.ddns.net/house-explorer/" target="_blank">
-                        <span>house explorer</span>
-                      </a>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.5/css/flag-icon.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <aside id="sidebar">
+                <section id="userpic">
+                    <img alt="userpic" src="images/sasha.png" />
+                </section>
+                <section id="full-name">Sasha Kirillov</section>
+                <section id="social-networks"></section>
+            </aside>
+            <main>
+                <section class="main-section">
+                    <div class="main-section-heading">About me</div>
+                    <div class="main-section-content" id="about">
+                        <div id="introduction">
+                            A computational linguist that realized he is more
+                            interested in pursuing a career in IT. I love
+                            learning both natural and programming languages ✨
+                        </div>
+                        <div class="icons-container">
+                            <span
+                                class="flag-icon flag-icon-ru flag-icon-squared"
+                            ></span>
+                            <span
+                                class="flag-icon flag-icon-gb flag-icon-squared"
+                            ></span>
+                            <i class="language-icon fab fa-python"></i>
+                            <span
+                                class="flag-icon flag-icon-es flag-icon-squared"
+                            ></span>
+                            <i class="language-icon fab fa-js-square"></i>
+                        </div>
                     </div>
-                    <div class="project-description">
-                      A React app for exploring Russian residential architecture
+                </section>
+                <section class="main-section">
+                    <div class="main-section-heading">Projects</div>
+                    <div class="main-section-content" id="projects">
+                        <div class="project-card main">
+                            <div class="project-logo">
+                                <img src="images/house-logo.svg" alt="house logo" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-name">
+                                    <a
+                                        href="https://sasha-kir.ddns.net/house-explorer/"
+                                        target="_blank"
+                                    >
+                                        <span>house explorer</span>
+                                    </a>
+                                </div>
+                                <div class="project-description">
+                                    A web app for exploring Russian residential
+                                    architecture
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-logo">
+                                <img src="images/lada-logo.png" alt="avtovaz logo" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-name">
+                                    <a
+                                        href="https://sasha-kir.ddns.net/avtovaz/"
+                                        target="_blank"
+                                    >
+                                        <span>avtovaz</span>
+                                    </a>
+                                </div>
+                                <div class="project-description">
+                                    A website about classic AvtoVAZ cars
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-logo">
+                                <img src="images/carrot-logo.png" alt="carrot logo" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-name">
+                                    <a
+                                        href="https://github.com/sasha-kir/hungry-vegan"
+                                        target="_blank"
+                                    >
+                                        <span>hungry vegan</span>
+                                    </a>
+                                </div>
+                                <div class="project-description">
+                                    WIP: A web app for vegans to find food
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
-                  <div class="project-card">
-                    <div class="project-logo">
-                      <img src="https://sasha-kir.ddns.net/avtovaz/pics/lada-logo.png" />
-                    </div>
-                    <div class="project-content">
-                      <div class="project-name">
-                        <a href="https://sasha-kir.ddns.net/avtovaz/" target="_blank">
-                          <span>avtovaz</span>
-                        </a>
-                      </div>
-                      <div class="project-description">
-                        A website about classic AvtoVAZ cars
-                    </div>
-                  </div>
-                  </div>
-                  <div class="project-card">
-                    <div class="project-logo">
-                      <img src="https://sasha-kir.ddns.net/face-detection/static/media/planet.730da5c1.png" />
-                    </div>
-                    <div class="project-content">
-                      <div class="project-name">
-                        <a href="https://sasha-kir.ddns.net/face-detection/" target="_blank">
-                          <span>face detection</span>
-                        </a>
-                      </div>
-                      <div class="project-description">
-                        A React app where users can detect faces in images
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </section>
-        </main>
-    </div>
-    <!-- feather icons -->
-    <script defer crossorigin="anonymous" 
-        src="https://unpkg.com/feather-icons@4.25.0/dist/feather.min.js"></script>
-    <!-- font awesome icons -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" crossorigin="anonymous"></script>
-    <!-- scripts -->
-    <script defer src="script.js"></script>  
-  </body>
+                </section>
+            </main>
+        </div>
+        <!-- feather icons -->
+        <script
+            defer
+            crossorigin="anonymous"
+            src="https://unpkg.com/feather-icons@4.25.0/dist/feather.min.js"
+        ></script>
+        <!-- font awesome icons -->
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- scripts -->
+        <script defer src="script.js"></script>
+    </body>
 </html>
