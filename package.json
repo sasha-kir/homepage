@@ -2,9 +2,10 @@
   "name": "sasha-kir-homepage",
   "version": "1.0.0",
   "description": "Homepage of Sasha Kirillov",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,25 @@
   },
   "homepage": "https://github.com/sasha-kir/homepage#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "svg-url-loader": "^5.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "feather-icons": "^4.28.0",
+    "flag-icon-css": "^3.4.6"
+  }
 }
