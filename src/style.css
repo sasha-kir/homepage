@@ -19,7 +19,7 @@
     --main-theme: #094067;
     --light-theme: #fffffe;
     --highlight: #eee;
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 2fr;
     width: 100vw;
     height: 100vh;
