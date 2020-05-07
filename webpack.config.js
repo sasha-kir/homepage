@@ -1,11 +1,12 @@
 const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const env = process.env.NODE_ENV || "development";
 
 module.exports = {
     entry: {
-        es: "./src",
+        main: "./src",
     },
     output: {
         filename: "main.js",
@@ -19,7 +20,9 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env"],
+                        presets: [
+                            ["@babel/preset-env", { modules: false }],
+                        ],
                     },
                 },
             },
@@ -32,15 +35,16 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                use: [
-                    "svg-url-loader",
-                ],
+                use: {
+                    loader: "svg-url-loader",
+                },
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf|png|jpg|gif)$/,
+                test: /\.(woff|woff2|eot|ttf|otf|jpg|png|gif)$/,
                 use: {
-                    loader: "url-loader?limit=100000",
+                    loader: "url-loader",
                     options: {
+                        limit: 100000,
                         name: "[name].[ext]",
                         outputPath: "fonts/",
                     },
@@ -48,7 +52,18 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new BundleAnalyzerPlugin(),
+    ],
     optimization: {
-        minimizer: [new UglifyJsPlugin()],
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    compress: {
+                        collapse_vars: false,
+                    },
+                },
+            }),
+        ],
     },
 };
