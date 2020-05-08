@@ -1,6 +1,7 @@
 const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const env = process.env.NODE_ENV || "development";
 
@@ -30,7 +31,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                 ],
             },
@@ -55,6 +56,7 @@ module.exports = {
     },
     plugins: [
         new BundleAnalyzerPlugin(),
+        new MiniCssExtractPlugin({ filename: "style.css" }),
     ],
     optimization: {
         minimizer: [
