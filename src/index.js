@@ -5,9 +5,7 @@ import { faJsSquare } from "@fortawesome/free-brands-svg-icons/faJsSquare";
 import "flag-icon-css/css/flag-icon.css";
 
 import userpic from "./images/sasha.png";
-import houseLogo from "./images/house-logo.svg";
-import ladaLogo from "./images/lada-logo.png";
-import carrotLogo from "./images/carrot-logo.png";
+import { networksData, projectsData } from "./data";
 import "./style.css";
 
 library.add(faPython, faJsSquare);
@@ -19,49 +17,14 @@ userpicImage.src = userpic;
 userpicImage.alt = "profile photo";
 userpicContainer.appendChild(userpicImage);
 
-const networksData = {
-    github: {
-        label: "Github",
-        icon: "github",
-        url: "https://github.com/sasha-kir/",
-    },
-    resume: {
-        label: "CV",
-        icon: "file-text",
-        url: "http://sasha-kir.ddns.net/cv",
-    },
-    email: {
-        label: "Email",
-        icon: "mail",
-        url: "mailto:sashaakir@yandex.com?subject=Hi%20Sasha",
-    },
-    linkedIn: {
-        label: "LinkedIn",
-        icon: "linkedin",
-        url: "https://www.linkedin.com/in/alexander-k-307466189/",
-    },
-};
-
-const projectsData = {
-    houseExplorer: {
-        name: "house explorer",
-        logo: houseLogo,
-        url: "https://sasha-kir.ddns.net/house-explorer/",
-        description: "A web app for exploring Russian residential architecture",
-        isMain: true,
-    },
-    avtovaz: {
-        name: "avtovaz",
-        logo: ladaLogo,
-        url: "https://sasha-kir.ddns.net/avtovaz/",
-        description: "A website about classic AvtoVAZ cars",
-    },
-    hungryVegan: {
-        name: "hungry vegan",
-        logo: carrotLogo,
-        url: "https://github.com/sasha-kir/hungry-vegan",
-        description: "WIP: A web app for vegans to find food",
-    },
+const createLink = (url) => {
+    const link = document.createElement("a");
+    Object.assign(link, {
+        href: url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+    });
+    return link;
 };
 
 const networksContainer = document.getElementById("social-networks");
@@ -72,22 +35,18 @@ Object.keys(networksData).forEach((key) => {
     const icon = document.createElement("i");
     icon.setAttribute("data-feather", network.icon);
 
-    const link = document.createElement("a");
-    link.appendChild(icon);
-    link.classList.add("social-link");
-    link.setAttribute("href", network.url);
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
+    const networkLink = createLink(network.url);
+    networkLink.appendChild(icon);
+    networkLink.classList.add("social-link");
 
     const tooltip = document.createElement("div");
     tooltip.classList.add("tooltip");
-    const tooltipText = document.createTextNode(network.label);
-    tooltip.appendChild(tooltipText);
+    tooltip.textContent = network.label;
 
     const button = document.createElement("button");
     button.classList.add("social-btn");
-    button.setAttribute("aria-label", network.label);
-    button.appendChild(link);
+    button["aria-label"] = network.label;
+    button.appendChild(networkLink);
     button.appendChild(tooltip);
     networksContainer.appendChild(button);
 });
@@ -105,10 +64,7 @@ Object.keys(projectsData).forEach((key) => {
 
     const label = document.createElement("span");
     label.textContent = project.name;
-    const projectLink = document.createElement("a");
-    projectLink.setAttribute("href", project.url);
-    projectLink.setAttribute("target", "_blank");
-    projectLink.setAttribute("rel", "noopener noreferrer");
+    const projectLink = createLink(project.url);
     projectLink.appendChild(label);
 
     const nameContainer = document.createElement("div");
