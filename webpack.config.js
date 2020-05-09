@@ -1,7 +1,8 @@
 const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -22,7 +23,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /\/node_modules\//,
+                exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
@@ -49,18 +50,14 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf|jpg|png|gif)$/,
                 use: {
                     loader: "url-loader",
-                    options: {
-                        limit: 100000,
-                        name: "[name].[ext]",
-                        outputPath: "fonts/",
-                    },
                 },
             },
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),
         new MiniCssExtractPlugin({
             filename: "style.[chunkhash].css",
         }),
@@ -71,15 +68,19 @@ module.exports = {
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: "defer",
         }),
+        new CleanWebpackPlugin(),
     ],
     optimization: {
+        minimize: env === "production",
         minimizer: [
-            new UglifyJsPlugin({
-                uglifyOptions: {
-                    compress: {
-                        collapse_vars: false,
+            new OptimizeCssAssetsPlugin(),
+            new TerserPlugin({
+                terserOptions: {
+                    output: {
+                        comments: false,
                     },
                 },
+                extractComments: false,
             }),
         ],
     },

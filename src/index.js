@@ -2,7 +2,6 @@ import feather from "feather-icons";
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faPython } from "@fortawesome/free-brands-svg-icons/faPython";
 import { faJsSquare } from "@fortawesome/free-brands-svg-icons/faJsSquare";
-import "flag-icon-css/css/flag-icon.css";
 
 import userpic from "./images/sasha.png";
 import { networksData, projectsData } from "./data";
