@@ -2,15 +2,19 @@ const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const env = process.env.NODE_ENV || "development";
 
 module.exports = {
+    mode: env,
     entry: {
         main: "./src",
     },
     output: {
-        filename: "main.js",
+        filename: "[name].[chunkhash].js",
         path: path.resolve(__dirname, "build"),
     },
     watch: env === "development",
@@ -55,8 +59,18 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new BundleAnalyzerPlugin(),
-        new MiniCssExtractPlugin({ filename: "style.css" }),
+        new MiniCssExtractPlugin({
+            filename: "style.[chunkhash].css",
+        }),
+        new HTMLWebpackPlugin({
+            template: "public/index.html",
+            favicon: "public/favicon.ico",
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: "defer",
+        }),
     ],
     optimization: {
         minimizer: [
@@ -68,5 +82,8 @@ module.exports = {
                 },
             }),
         ],
+    },
+    performance: {
+        hints: false,
     },
 };

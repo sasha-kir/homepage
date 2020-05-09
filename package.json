@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint .",
-    "build": "webpack"
+    "start": "webpack",
+    "build": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -21,13 +22,14 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "file-loader": "^6.0.0",
-    "image-webpack-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^1.2.1",
     "svg-url-loader": "^5.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",

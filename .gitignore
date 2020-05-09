@@ -4,6 +4,7 @@
 # files
 fonts/*
 images/*
+build/*
 
 # misc
 .DS_Store
