@@ -72,14 +72,13 @@ main {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px;
+    height: 300px;
 }
 
 .social-btn {
     background-color: var(--main-theme);
     color: var(--light-theme);
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 10px;
     height: 60px;
     width: 60px;
@@ -309,6 +308,7 @@ main {
     #social-networks {
         grid-template-rows: auto;
         grid-template-columns: repeat(4, 1fr);
+        height: auto;
     }
     #full-name {
         align-self: center;
