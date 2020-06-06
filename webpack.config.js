@@ -63,7 +63,6 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: "public/index.html",
-            favicon: "public/favicon.ico",
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: "defer",

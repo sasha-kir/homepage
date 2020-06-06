@@ -3,7 +3,7 @@ import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faPython } from "@fortawesome/free-brands-svg-icons/faPython";
 import { faJsSquare } from "@fortawesome/free-brands-svg-icons/faJsSquare";
 
-import userpic from "./images/sasha.png";
+import userpic from "./images/sasha-emoji.png";
 import { networksData, projectsData } from "./data";
 import "./style.css";
 

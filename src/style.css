@@ -55,10 +55,8 @@ main {
 }
 
 #userpic img {
-    height: 150px;
+    height: 200px;
     width: auto;
-    border-radius: 50%;
-    border: 5px solid var(--main-dark-color);
 }
 
 #full-name {
