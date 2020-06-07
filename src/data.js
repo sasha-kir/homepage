@@ -11,7 +11,7 @@ export const networksData = {
     resume: {
         label: "CV",
         icon: "file-text",
-        url: "http://sasha-kir.ddns.net/cv",
+        url: "http://sasha-kir.com/cv",
     },
     email: {
         label: "Email",
@@ -29,14 +29,14 @@ export const projectsData = {
     houseExplorer: {
         name: "house explorer",
         logo: houseLogo,
-        url: "https://sasha-kir.ddns.net/house-explorer/",
+        url: "https://sasha-kir.com/house-explorer/",
         description: "A web app for exploring Russian residential architecture",
         isMain: true,
     },
     avtovaz: {
         name: "avtovaz",
         logo: ladaLogo,
-        url: "https://sasha-kir.ddns.net/avtovaz/",
+        url: "https://sasha-kir.com/avtovaz/",
         description: "A website about classic AvtoVAZ cars",
     },
     hungryVegan: {
