@@ -1,4 +1,4 @@
-name: Command via SSH
+name: Build homepage remotely
 
 on: push
 
@@ -7,12 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: multiple host
+        - name: Build homepage files
           uses: appleboy/ssh-action@master
           with:
             host: ${{ secrets.HOST }}
             username: sasha
             key: ${{ secrets.PRIVATE_KEY }}
             script: |
-                whoami
-                ls -al
+                cd homepage
+                git fetch
+                git reset --hard origin/master
+                npm install
+                npm run build

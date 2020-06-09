@@ -56,7 +56,7 @@ module.exports = {
     },
     plugins: [
         new BundleAnalyzerPlugin({
-            openAnalyzer: false,
+            analyzerMode: env === "development" ? "static" : "disabled",
         }),
         new MiniCssExtractPlugin({
             filename: "style.[chunkhash].css",
