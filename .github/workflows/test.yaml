@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: ls -a
-          host: ${{ secrets.HOST }}
-          username: sasha
-          privateKey: ${{ secrets.PRIVATE_KEY }}
+        - name: multiple host
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: sasha
+            key: ${{ secrets.PRIVATE_KEY }}
+            script: |
+                whoami
+                ls -al
