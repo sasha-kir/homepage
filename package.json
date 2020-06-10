@@ -43,6 +43,6 @@
     "@fortawesome/fontawesome-svg-core": "1.2.28",
     "@fortawesome/free-brands-svg-icons": "5.13.0",
     "feather-icons": "4.28.0",
-    "flag-icon-css": "3.4.6"
+    "flag-icon-css": "3.5.0"
   }
 }
