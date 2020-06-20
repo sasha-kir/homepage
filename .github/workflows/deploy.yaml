@@ -20,5 +20,4 @@ jobs:
                 cd homepage
                 git fetch
                 git reset --hard origin/master
-                npm install
-                npm run build
+                make build
