@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 1em;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -313,6 +314,9 @@ main {
     }
     .social-btn:hover .tooltip {
         display: none;
+    }
+    #projects {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     .project-card {
         padding: 10px 0px;
