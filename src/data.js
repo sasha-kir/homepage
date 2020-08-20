@@ -33,16 +33,16 @@ export const projectsData = {
         description: "A web app for exploring Russian residential architecture",
         isMain: true,
     },
+    hungryVegan: {
+        name: "hungry vegan",
+        logo: carrotLogo,
+        url: "https://sasha-kir.com/hungry-vegan/",
+        description: "A web app for lists of places with tasty food",
+    },
     avtovaz: {
         name: "avtovaz",
         logo: ladaLogo,
         url: "https://sasha-kir.com/avtovaz/",
         description: "A website about classic AvtoVAZ cars",
-    },
-    hungryVegan: {
-        name: "hungry vegan",
-        logo: carrotLogo,
-        url: "https://github.com/sasha-kir/hungry-vegan",
-        description: "WIP: A web app for vegans to find food",
     },
 };
