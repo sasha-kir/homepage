@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1.1rem;
 }
 
 @font-face {
@@ -25,7 +25,7 @@
     width: 100vw;
     height: 100vh;
     color: var(--main-dark-color);
-    font-family: "Monaco", sans-serif;
+    font-family: "Source Code Pro", "Monaco", monospace;
 }
 
 button {
@@ -61,6 +61,7 @@ main {
 
 #full-name {
     font-family: "soviet-league", sans-serif;
+    font-weight: normal;
     font-size: 3em;
     letter-spacing: 0.05em;
     align-self: start;
@@ -109,7 +110,7 @@ main {
     padding: 10px;
     color: var(--light-theme);
     letter-spacing: 0.05em;
-    font-family: "Monaco", sans-serif;
+    font-family: "Source Code Pro", "Monaco", monospace;
     border-radius: 10px;
     z-index: 100;
     transform: translate(0, -50%);
@@ -129,9 +130,10 @@ main {
 .main-section-heading {
     background-color: var(--light-theme);
     border-radius: 4px;
-    font-size: 2em;
+    font-size: 1.8em;
     letter-spacing: 0.1em;
     font-family: "soviet-league", sans-serif;
+    font-weight: normal;
     max-width: 150px;
     padding: 10px 15px;
     grid-row: 1 / span 2;
@@ -155,6 +157,7 @@ main {
 
 #introduction {
     margin: 10px 0;
+    padding: 0 5px;
 }
 
 .icons-container {
@@ -316,6 +319,9 @@ main {
     }
     #projects {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .main-section {
+        margin: 0 30px;
     }
     .project-card {
         padding: 10px 0px;
