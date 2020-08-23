@@ -1,12 +1,12 @@
 {
     "extends": ["config:base"],
+    "ignoreDeps": ["flag-icon-css"],
     "packageRules": [
         {
             "updateTypes": ["minor", "patch", "pin", "digest"],
             "automerge": true,
             "automergeType": "branch",
-            "requiredStatusChecks": null,
-	        "ignoreDeps": ["flag-icon-css"]
+            "requiredStatusChecks": null
         }
     ]
 }
