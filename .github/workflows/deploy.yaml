@@ -3,7 +3,7 @@ name: Build homepage remotely
 on: 
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -19,5 +19,5 @@ jobs:
             script: |
                 cd homepage
                 git fetch
-                git reset --hard origin/master
+                git reset --hard origin/main
                 make build
