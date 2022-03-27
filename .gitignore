@@ -2,8 +2,6 @@
 /node_modules
 
 # files
-fonts/*
-images/*
 build/*
 
 # misc
